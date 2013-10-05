@@ -1,13 +1,11 @@
-/*global define */
-define(['marionette', 'tpl!templates/track.tpl'], function (Marionette, trackTemplate) {
-    'use strict';
+define(['marionette', 'tpl!tracks/templates/track.tpl'], function (Marionette, trackTemplate) {
 
-    var track = Marionette.ItemView.extend({
+    var TrackView = Marionette.ItemView.extend({
         template: trackTemplate,
         modelEvents: {
             'change': 'render'
         }
     });
 
-    return track;
+    return TrackView;
 });

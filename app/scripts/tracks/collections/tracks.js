@@ -1,4 +1,4 @@
-define(['underscore', 'backbone', 'models/track', 'config'], function (_, Backbone, Track, config) {
+define(['underscore', 'backbone', 'tracks/models/track', 'config'], function (_, Backbone, Track, config) {
 
     var tracks = Backbone.Collection.extend({
         model: Track,

@@ -107,7 +107,7 @@ require(['app', 'jquery'], function (app, $) {
     'use strict';
 
     $(function() {
-        require(['dropboxAuth/module'], function() {
+        require(['dropboxAuth/module', 'tracks/module'], function() {
             app.start();
         });
     });

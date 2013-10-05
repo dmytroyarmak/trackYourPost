@@ -1,13 +1,17 @@
-define(['marionette', 'views/track', 'tpl!templates/tracks.tpl'], function (Marionette, TrackView, tracksTemplate) {
+define(
+    ['marionette', 'tracks/views/track', 'tracks/views/emptyTrack', 'tpl!tracks/templates/tracks.tpl'],
+    function (Marionette, TrackView, EmptyTrackView, tracksTemplate) {
 
-    var tracks = Marionette.CompositeView.extend({
-        template: tracksTemplate,
-        itemView: TrackView,
-        itemViewContainer: '.j-tracks-container',
-        triggers: {
-            'click .j-refresh-track': 'refresh:clicked'
-        },
-    });
+        var TracksView = Marionette.CompositeView.extend({
+            template: tracksTemplate,
+            itemView: TrackView,
+            emptyView: EmptyTrackView,
+            itemViewContainer: '.j-tracks-container',
+            triggers: {
+                'click .j-refresh-track': 'refresh:clicked'
+            },
+        });
 
-    return tracks;
-});
+        return TracksView;
+    }
+);
