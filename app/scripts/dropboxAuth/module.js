@@ -18,6 +18,7 @@ define(['app', 'dropbox', 'config', 'dropboxAuth/views/authPanel'], function (ap
             }
 
             if (dropboxClient.isAuthenticated()) {
+                app.vent.trigger('authorization:success');
                 dropboxClient.getAccountInfo({}, function(error, accountInfo) {
                     if (error) {
                         console.log('Get Account Info error: ' + error);
