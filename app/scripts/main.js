@@ -17,7 +17,8 @@ require.config({
         requirejs: '../bower_components/requirejs/require',
         'sass-bootstrap': '../bower_components/sass-bootstrap/dist/js/bootstrap',
         underscore: '../bower_components/underscore/underscore',
-        tpl: '../bower_components/requirejs-tpl/tpl'
+        tpl: '../bower_components/requirejs-tpl/tpl',
+        dropbox: 'https://www.dropbox.com/static/api/dropbox-datastores-1.0-latest'
     },
     shim: {
         bootstrapAffix: {
@@ -95,18 +96,19 @@ require.config({
                 'backbone'
             ],
             exports: 'Marionette'
+        },
+        dropbox: {
+            exports: 'Dropbox'
         }
     }
 });
 
-require(['app', 'jquery', 'modules/tracks'], function (app, $, tracksModule) {
+require(['app', 'jquery'], function (app, $) {
     'use strict';
 
     $(function() {
-        app.on('start', function() {
-            tracksModule.start();
+        require(['dropboxAuth/module'], function() {
+            app.start();
         });
-
-        app.start();
     });
 });

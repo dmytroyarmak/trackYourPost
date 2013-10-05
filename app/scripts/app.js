@@ -5,7 +5,7 @@ define(['marionette'], function (Marionette) {
     var app = new Marionette.Application();
 
     app.addRegions({
-        mainRegion: '.main-region'
+        mainRegion: '.j-main-region'
     });
 
     return app;
