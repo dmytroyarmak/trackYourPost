@@ -1,4 +1,4 @@
-define(['app', 'dropbox', 'config', 'dropboxAuth/views/authPanel'], function (app, Dropbox, config, AuthPanelView) {
+define(['app', 'dropbox', 'config', 'dropboxAuth/views/authPanel', 'dropboxDatastore'], function (app, Dropbox, config, AuthPanelView, DropboxDatastore) {
 
     app.addRegions({
         dropboxAuthRegion: '.j-dropbox-auth-region'
@@ -18,12 +18,13 @@ define(['app', 'dropbox', 'config', 'dropboxAuth/views/authPanel'], function (ap
             }
 
             if (dropboxClient.isAuthenticated()) {
-                app.vent.trigger('authorization:success');
                 dropboxClient.getAccountInfo({}, function(error, accountInfo) {
                     if (error) {
                         console.log('Get Account Info error: ' + error);
                     }
                     showAuthPanelView(dropboxClient, accountInfo);
+                    DropboxDatastore.client = dropboxClient;
+                    app.vent.trigger('authorization:success');
                 });
             } else {
                 showAuthPanelView(dropboxClient);

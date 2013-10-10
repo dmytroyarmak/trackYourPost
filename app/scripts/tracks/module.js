@@ -3,30 +3,34 @@ define(
     function (app, TracksCollection, LayoutView, ButtonsPanelView, AddTrackView, TracksListView) {
         app.on('start', function() {
             console.log('start tracks module');
-            var layoutView = new LayoutView(),
-                tracksCollection = new TracksCollection(),
-                buttonsPanelView = new ButtonsPanelView(),
-                addTrackView = new AddTrackView(),
-                tracksListView = new TracksListView({collection: tracksCollection});
+            app.vent.on('authorization:success', function() {
+                var layoutView = new LayoutView(),
+                    tracksCollection = new TracksCollection(),
+                    buttonsPanelView = new ButtonsPanelView(),
+                    addTrackView = new AddTrackView(),
+                    tracksListView = new TracksListView({collection: tracksCollection});
 
-            buttonsPanelView.on('click:refresh', function() {
                 tracksCollection.fetch();
-            });
 
-            addTrackView.on('submit:form', function(data) {
-                tracksCollection.add({
-                    barcode: data.barcode,
-                    description: data.description
+                buttonsPanelView.on('click:refresh', function() {
+                    tracksCollection.fetchLastStatus();
                 });
-            });
 
-            layoutView.on('show', function() {
-                layoutView.buttonsPanelRegion.show(buttonsPanelView);
-                layoutView.addTrackRegion.show(addTrackView);
-                layoutView.tracksListRegion.show(tracksListView);
-            });
+                addTrackView.on('submit:form', function(data) {
+                    tracksCollection.create({
+                        barcode: data.barcode,
+                        description: data.description
+                    });
+                });
 
-            app.mainRegion.show(layoutView);
+                layoutView.on('show', function() {
+                    layoutView.buttonsPanelRegion.show(buttonsPanelView);
+                    layoutView.addTrackRegion.show(addTrackView);
+                    layoutView.tracksListRegion.show(tracksListView);
+                });
+
+                app.mainRegion.show(layoutView);
+            });
         });
     }
 );

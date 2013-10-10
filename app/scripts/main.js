@@ -18,7 +18,8 @@ require.config({
         'sass-bootstrap': '../bower_components/sass-bootstrap/dist/js/bootstrap',
         underscore: '../bower_components/underscore/underscore',
         tpl: '../bower_components/requirejs-tpl/tpl',
-        dropbox: 'https://www.dropbox.com/static/api/dropbox-datastores-1.0-latest'
+        dropbox: 'https://www.dropbox.com/static/api/dropbox-datastores-1.0-latest',
+        dropboxDatastore: '../bower_components/backbone.dropboxDatastore/backbone.dropboxDatastore'
     },
     shim: {
         bootstrapAffix: {
