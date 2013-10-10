@@ -19,6 +19,12 @@ define(['backbone'], function (Backbone) {
             eventdescription: '...',
             lastoffice: '...',
             lastofficeindex: '...'
+        },
+
+        initialize: function() {
+            this.on('change', function() {
+                this.save();
+            }, this);
         }
     });
 
