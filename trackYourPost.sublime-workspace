@@ -4,6 +4,10 @@
 		"selected_items":
 		[
 			[
+				"drop",
+				"dropboxClient"
+			],
+			[
 				"track",
 				"tracksCollectionView"
 			],
@@ -510,84 +514,56 @@
 			[
 				"and",
 				"andReturn"
-			],
-			[
-				"acc",
-				"accountsRepository"
 			]
 		]
 	},
 	"buffers":
 	[
 		{
-			"file": "app/index.html",
-			"settings":
-			{
-				"buffer_size": 2450,
-				"line_ending": "Unix"
-			}
-		},
-		{
-			"file": "app/scripts/models/track.js",
-			"settings":
-			{
-				"buffer_size": 511,
-				"line_ending": "Unix"
-			}
-		},
-		{
-			"file": "Gruntfile.js",
-			"settings":
-			{
-				"buffer_size": 11551,
-				"line_ending": "Unix"
-			}
-		},
-		{
-			"file": "app/scripts/collections/tracks.js",
-			"settings":
-			{
-				"buffer_size": 203,
-				"line_ending": "Unix"
-			}
-		},
-		{
 			"file": "app/scripts/main.js",
 			"settings":
 			{
-				"buffer_size": 3098,
+				"buffer_size": 3315,
 				"line_ending": "Unix"
 			}
 		},
 		{
-			"file": "app/scripts/modules/tracks.js",
+			"file": "app/scripts/tracks/models/track.js",
 			"settings":
 			{
-				"buffer_size": 828,
+				"buffer_size": 673,
 				"line_ending": "Unix"
 			}
 		},
 		{
-			"file": "app/scripts/views/track.js",
+			"file": "app/scripts/tracks/views/track.js",
 			"settings":
 			{
-				"buffer_size": 322,
+				"buffer_size": 442,
 				"line_ending": "Unix"
 			}
 		},
 		{
-			"file": "app/scripts/app.js",
+			"file": "app/scripts/tracks/templates/track.tpl",
 			"settings":
 			{
-				"buffer_size": 215,
+				"buffer_size": 434,
 				"line_ending": "Unix"
 			}
 		},
 		{
-			"file": "app/scripts/views/tracks.js",
+			"file": "app/scripts/tracks/module.js",
 			"settings":
 			{
-				"buffer_size": 223,
+				"buffer_size": 1528,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "app/scripts/tracks/collections/tracks.js",
+			"settings":
+			{
+				"buffer_size": 739,
 				"line_ending": "Unix"
 			}
 		},
@@ -663,12 +639,21 @@
 	},
 	"file_history":
 	[
+		"/home/wazaby/Projects/trackYourPost/app/scripts/dropboxAuth/module.js",
+		"/home/wazaby/Projects/trackYourPost/app/bower_components/backbone/backbone.js",
+		"/home/wazaby/Projects/trackYourPost/app/scripts/app.js",
+		"/home/wazaby/Projects/trackYourPost/app/scripts/main.js",
+		"/home/wazaby/Projects/trackYourPost/app/index.html",
+		"/home/wazaby/Projects/trackYourPost/app/scripts/views/tracks.js",
+		"/home/wazaby/Projects/trackYourPost/app/scripts/views/track.js",
+		"/home/wazaby/Projects/trackYourPost/app/scripts/collections/tracks.js",
+		"/home/wazaby/Projects/trackYourPost/app/scripts/models/track.js",
+		"/home/wazaby/Projects/trackYourPost/app/scripts/modules/tracks.js",
 		"/media/wazaby/My Passport/My projects/FindMyMail/find_my_mail.rb",
 		"/home/wazaby/Projects/trackYourPost/app/scripts/templates/track.tpl",
 		"/home/wazaby/Projects/trackYourPost/app/bower_components/marionette/src/marionette.collectionview.js",
 		"/home/wazaby/Projects/trackYourPost/app/bower_components/marionette/src/marionette.application.js",
 		"/home/wazaby/Projects/trackYourPost/trackYourPost.sublime-project",
-		"/home/wazaby/Projects/trackYourPost/app/scripts/main.js",
 		"/home/wazaby/Projects/bomberman/board.js",
 		"/home/wazaby/Projects/bomberman/javascript/README.txt",
 		"/home/wazaby/Downloads/bomberman-servers/java/README.txt",
@@ -781,16 +766,7 @@
 		"/home/wazaby/Work/streamfury/vendor/engines/mediastream/core/app/assets/templates/privateShowModal.jst.ejs",
 		"/home/wazaby/Work/streamfury/vendor/engines/mediastream/core/app/assets/templates/profile/public/room_buttons.jst.ejs",
 		"/home/wazaby/Documents/UWC/Finalists_1/Frontend/1-/Павло Вінник/html/js/main.js",
-		"/home/wazaby/Work/streamfury/tmp/karma.conf.js",
-		"/home/wazaby/Work/streamfury/vendor/engines/mediastream/core/lib/tasks/test.rake",
-		"/home/wazaby/Work/streamfury/vendor/engines/mediastream/core/app/assets/javascripts/mediastream/modules/widget/collections/prepaidRequests.js",
-		"/home/wazaby/Work/streamfury/vendor/engines/mediastream/core/app/assets/javascripts/mediastream/modules/widget/models/prepaidRequest.js",
-		"/home/wazaby/Work/streamfury/vendor/engines/mediastream/core/app/assets/javascripts/mediastream/modules/widget/widgetDefenition.js",
-		"/home/wazaby/Work/streamfury/vendor/engines/mediastream/core/app/assets/javascripts/mediastream/modules/widget/widgetBuilder.js",
-		"/home/wazaby/Work/streamfury/vendor/engines/mediastream/.jshintrc",
-		"/home/wazaby/Work/streamfury/vendor/engines/mediastream/core/app/assets/javascripts/mediastream/modules/widget/widgetSenderController.js",
-		"/home/wazaby/Work/streamfury/vendor/engines/mediastream/core/vendor/assets/javascripts/backbone.js",
-		"/home/wazaby/Work/streamfury/vendor/engines/mediastream/core/app/assets/javascripts/mediastream/modules/widget/widgetController.js"
+		"/home/wazaby/Work/streamfury/tmp/karma.conf.js"
 	],
 	"find":
 	{
@@ -844,6 +820,7 @@
 		"case_sensitive": true,
 		"find_history":
 		[
+			"onAuthenticateDone",
 			"connect",
 			"server",
 			"\"",
@@ -970,8 +947,7 @@
 			"performer_id",
 			"{\n      performer_id: @performer.id,\n      member_id: @member.id,\n      amount: 100,\n      expire_at: Time.new + 3.minutes\n    }",
 			"attributes",
-			"create",
-			"MetadatumTest"
+			"create"
 		],
 		"highlight": true,
 		"in_selection": false,
@@ -999,29 +975,29 @@
 	"groups":
 	[
 		{
-			"selected": 5,
+			"selected": 1,
 			"sheets":
 			[
 				{
 					"buffer": 0,
-					"file": "app/index.html",
+					"file": "app/scripts/main.js",
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 2450,
+						"buffer_size": 3315,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								1471,
-								1471
+								1397,
+								1397
 							]
 						],
 						"settings":
 						{
-							"syntax": "Packages/HTML/HTML.tmLanguage",
+							"syntax": "Packages/JavaScript/JavaScript.tmLanguage",
 							"tab_size": 4,
 							"translate_tabs_to_spaces": true
 						},
@@ -1033,25 +1009,26 @@
 				},
 				{
 					"buffer": 1,
-					"file": "app/scripts/models/track.js",
+					"file": "app/scripts/tracks/models/track.js",
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 511,
+						"buffer_size": 673,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								371,
-								371
+								393,
+								393
 							]
 						],
 						"settings":
 						{
 							"syntax": "Packages/JavaScript/JavaScript.tmLanguage",
-							"tab_size": 4
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true
 						},
 						"translation.x": 0.0,
 						"translation.y": 0.0,
@@ -1061,53 +1038,51 @@
 				},
 				{
 					"buffer": 2,
-					"file": "Gruntfile.js",
-					"semi_transient": true,
+					"file": "app/scripts/tracks/views/track.js",
+					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 11551,
+						"buffer_size": 442,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								1911,
-								1911
+								283,
+								283
 							]
 						],
 						"settings":
 						{
-							"syntax": "Packages/JavaScript/JavaScript.tmLanguage",
-							"tab_size": 4,
-							"translate_tabs_to_spaces": true
+							"syntax": "Packages/JavaScript/JavaScript.tmLanguage"
 						},
 						"translation.x": 0.0,
-						"translation.y": 282.0,
+						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
 					"type": "text"
 				},
 				{
 					"buffer": 3,
-					"file": "app/scripts/collections/tracks.js",
+					"file": "app/scripts/tracks/templates/track.tpl",
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 203,
+						"buffer_size": 434,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								149,
-								149
+								407,
+								407
 							]
 						],
 						"settings":
 						{
-							"syntax": "Packages/JavaScript/JavaScript.tmLanguage"
+							"syntax": "Packages/HTML/HTML.tmLanguage"
 						},
 						"translation.x": 0.0,
 						"translation.y": 0.0,
@@ -1117,19 +1092,19 @@
 				},
 				{
 					"buffer": 4,
-					"file": "app/scripts/main.js",
+					"file": "app/scripts/tracks/module.js",
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 3098,
+						"buffer_size": 1528,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								3085,
-								3085
+								947,
+								947
 							]
 						],
 						"settings":
@@ -1139,32 +1114,33 @@
 							"translate_tabs_to_spaces": true
 						},
 						"translation.x": 0.0,
-						"translation.y": 1404.0,
+						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
 					"type": "text"
 				},
 				{
 					"buffer": 5,
-					"file": "app/scripts/modules/tracks.js",
+					"file": "app/scripts/tracks/collections/tracks.js",
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 828,
+						"buffer_size": 739,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								782,
-								782
+								715,
+								715
 							]
 						],
 						"settings":
 						{
 							"syntax": "Packages/JavaScript/JavaScript.tmLanguage",
-							"tab_size": 4
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true
 						},
 						"translation.x": 0.0,
 						"translation.y": 0.0,
@@ -1174,89 +1150,6 @@
 				},
 				{
 					"buffer": 6,
-					"file": "app/scripts/views/track.js",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 322,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								290,
-								290
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/JavaScript/JavaScript.tmLanguage"
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"type": "text"
-				},
-				{
-					"buffer": 7,
-					"file": "app/scripts/app.js",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 215,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								150,
-								150
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/JavaScript/JavaScript.tmLanguage",
-							"tab_size": 4
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"type": "text"
-				},
-				{
-					"buffer": 8,
-					"file": "app/scripts/views/tracks.js",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 223,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								53,
-								53
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/JavaScript/JavaScript.tmLanguage",
-							"tab_size": 4
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"type": "text"
-				},
-				{
-					"buffer": 9,
 					"file": "app/bower_components/backbone/backbone.js",
 					"semi_transient": false,
 					"settings":
@@ -1268,8 +1161,8 @@
 						"selection":
 						[
 							[
-								19381,
-								19381
+								44793,
+								44793
 							]
 						],
 						"settings":
@@ -1279,7 +1172,7 @@
 							"translate_tabs_to_spaces": true
 						},
 						"translation.x": 0.0,
-						"translation.y": 9102.0,
+						"translation.y": 13812.0,
 						"zoom_level": 1.0
 					},
 					"type": "text"
@@ -1333,6 +1226,14 @@
 		"height": 0.0,
 		"selected_items":
 		[
+			[
+				"back",
+				"app/bower_components/backbone/backbone.js"
+			],
+			[
+				"main",
+				"app/scripts/main.js"
+			],
 			[
 				"marco",
 				"app/bower_components/marionette/src/marionette.collectionview.js"
@@ -1694,10 +1595,6 @@
 				"core/vendor/assets/javascripts/backbone.wreqr.js"
 			],
 			[
-				"back",
-				"core/vendor/assets/javascripts/backbone.js"
-			],
-			[
 				"registerinvitation",
 				"core/app/assets/templates/registerInvitation.jst.ejs"
 			],
@@ -1840,10 +1737,6 @@
 			[
 				"ab",
 				"core/app/models/mediastream/ability.rb"
-			],
-			[
-				"ms.yml",
-				"core/lib/generators/mediastream/templates/ms.yml.erb"
 			]
 		],
 		"width": 0.0
@@ -1853,6 +1746,10 @@
 		"height": 500.0,
 		"selected_items":
 		[
+			[
+				"ba",
+				"~/Projects/backbone.dropboxDatastore.sublime-project"
+			],
 			[
 				"st",
 				"~/Work/streamfury.sublime-project"
@@ -1923,7 +1820,7 @@
 	"show_open_files": false,
 	"show_tabs": true,
 	"side_bar_visible": true,
-	"side_bar_width": 202.0,
+	"side_bar_width": 252.0,
 	"status_bar_visible": true,
 	"template_settings":
 	{
