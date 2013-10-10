@@ -13,7 +13,7 @@ define(['backbone'], function (Backbone) {
         //      - lastofficeindex
 
         defaults: {
-            barcode: null,
+            barcode: '',
             code: '...',
             eventdate: '...',
             eventdescription: '...',

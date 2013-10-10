@@ -4,13 +4,18 @@ define(['underscore', 'backbone', 'tracks/models/track', 'config', 'dropboxDatas
         model: Track,
         url: config.ukrPostApiUrl,
         dropboxDatastore: new DropboxDatastore('tracks'),
-        fetchLastStatus: function(options) {
-            // options = _.extend(options || {}, {
-            //     data: {
-            //         ids: this.pluck('barcode').join(',')
-            //     }
-            // });
-            // Backbone.Collection.prototype.fetch.call(this, options);
+        fetchLastStatus: function() {
+            Backbone.ajax({
+                dataType: 'json',
+                url: this.url,
+                data: {
+                    ids: this.pluck('barcode').join(',')
+                },
+                success: function(data) {
+                    this.set(data, {parse: true});
+                },
+                context: this
+            });
         }
     });
 
