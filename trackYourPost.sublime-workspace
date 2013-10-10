@@ -4,6 +4,10 @@
 		"selected_items":
 		[
 			[
+				"notification",
+				"notificationsRegion"
+			],
+			[
 				"drop",
 				"dropboxClient"
 			],
@@ -510,10 +514,6 @@
 			[
 				"d",
 				"DEFAULT_THREAD"
-			],
-			[
-				"and",
-				"andReturn"
 			]
 		]
 	},
@@ -523,7 +523,7 @@
 			"file": "app/scripts/main.js",
 			"settings":
 			{
-				"buffer_size": 3315,
+				"buffer_size": 3339,
 				"line_ending": "Unix"
 			}
 		},
@@ -531,7 +531,7 @@
 			"file": "app/scripts/tracks/models/track.js",
 			"settings":
 			{
-				"buffer_size": 673,
+				"buffer_size": 812,
 				"line_ending": "Unix"
 			}
 		},
@@ -552,10 +552,34 @@
 			}
 		},
 		{
+			"file": "app/scripts/notifications/module.js",
+			"settings":
+			{
+				"buffer_size": 503,
+				"line_ending": "Unix"
+			}
+		},
+		{
 			"file": "app/scripts/tracks/module.js",
 			"settings":
 			{
-				"buffer_size": 1528,
+				"buffer_size": 1842,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "app/404.html",
+			"settings":
+			{
+				"buffer_size": 4459,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "app/index.html",
+			"settings":
+			{
+				"buffer_size": 2323,
 				"line_ending": "Unix"
 			}
 		},
@@ -639,6 +663,7 @@
 	},
 	"file_history":
 	[
+		"/home/wazaby/Projects/trackYourPost/bower.json",
 		"/home/wazaby/Projects/trackYourPost/app/scripts/dropboxAuth/module.js",
 		"/home/wazaby/Projects/trackYourPost/app/bower_components/backbone/backbone.js",
 		"/home/wazaby/Projects/trackYourPost/app/scripts/app.js",
@@ -765,8 +790,7 @@
 		"/home/wazaby/Documents/UWC/Finalists_1/Frontend/1-/Павло Вінник/html/main.html",
 		"/home/wazaby/Work/streamfury/vendor/engines/mediastream/core/app/assets/templates/privateShowModal.jst.ejs",
 		"/home/wazaby/Work/streamfury/vendor/engines/mediastream/core/app/assets/templates/profile/public/room_buttons.jst.ejs",
-		"/home/wazaby/Documents/UWC/Finalists_1/Frontend/1-/Павло Вінник/html/js/main.js",
-		"/home/wazaby/Work/streamfury/tmp/karma.conf.js"
+		"/home/wazaby/Documents/UWC/Finalists_1/Frontend/1-/Павло Вінник/html/js/main.js"
 	],
 	"find":
 	{
@@ -975,7 +999,7 @@
 	"groups":
 	[
 		{
-			"selected": 1,
+			"selected": 6,
 			"sheets":
 			[
 				{
@@ -984,15 +1008,15 @@
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 3315,
+						"buffer_size": 3339,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								1397,
-								1397
+								3266,
+								3266
 							]
 						],
 						"settings":
@@ -1002,7 +1026,7 @@
 							"translate_tabs_to_spaces": true
 						},
 						"translation.x": 0.0,
-						"translation.y": 0.0,
+						"translation.y": 1728.0,
 						"zoom_level": 1.0
 					},
 					"type": "text"
@@ -1013,15 +1037,15 @@
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 673,
+						"buffer_size": 812,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								393,
-								393
+								348,
+								348
 							]
 						],
 						"settings":
@@ -1055,7 +1079,9 @@
 						],
 						"settings":
 						{
-							"syntax": "Packages/JavaScript/JavaScript.tmLanguage"
+							"syntax": "Packages/JavaScript/JavaScript.tmLanguage",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true
 						},
 						"translation.x": 0.0,
 						"translation.y": 0.0,
@@ -1092,19 +1118,48 @@
 				},
 				{
 					"buffer": 4,
-					"file": "app/scripts/tracks/module.js",
+					"file": "app/scripts/notifications/module.js",
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 1528,
+						"buffer_size": 503,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								947,
-								947
+								502,
+								502
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/JavaScript/JavaScript.tmLanguage",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 18.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 5,
+					"file": "app/scripts/tracks/module.js",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 1842,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								889,
+								889
 							]
 						],
 						"settings":
@@ -1120,7 +1175,65 @@
 					"type": "text"
 				},
 				{
-					"buffer": 5,
+					"buffer": 6,
+					"file": "app/404.html",
+					"semi_transient": true,
+					"settings":
+					{
+						"buffer_size": 4459,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								0,
+								0
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/HTML/HTML.tmLanguage",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 7,
+					"file": "app/index.html",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 2323,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								1349,
+								1349
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/HTML/HTML.tmLanguage",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 8,
 					"file": "app/scripts/tracks/collections/tracks.js",
 					"semi_transient": false,
 					"settings":
@@ -1149,7 +1262,7 @@
 					"type": "text"
 				},
 				{
-					"buffer": 6,
+					"buffer": 9,
 					"file": "app/bower_components/backbone/backbone.js",
 					"semi_transient": false,
 					"settings":
@@ -1161,8 +1274,8 @@
 						"selection":
 						[
 							[
-								44793,
-								44793
+								26108,
+								26108
 							]
 						],
 						"settings":
@@ -1172,7 +1285,7 @@
 							"translate_tabs_to_spaces": true
 						},
 						"translation.x": 0.0,
-						"translation.y": 13812.0,
+						"translation.y": 11922.0,
 						"zoom_level": 1.0
 					},
 					"type": "text"
@@ -1226,6 +1339,10 @@
 		"height": 0.0,
 		"selected_items":
 		[
+			[
+				"bowe",
+				"bower.json"
+			],
 			[
 				"back",
 				"app/bower_components/backbone/backbone.js"
@@ -1732,10 +1849,6 @@
 			],
 			[
 				"abi",
-				"core/app/models/mediastream/ability.rb"
-			],
-			[
-				"ab",
 				"core/app/models/mediastream/ability.rb"
 			]
 		],

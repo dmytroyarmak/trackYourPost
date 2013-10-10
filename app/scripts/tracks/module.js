@@ -12,6 +12,14 @@ define(
 
                 tracksCollection.fetch();
 
+                tracksCollection.on('change:eventdescription', function(track) {
+                    app.execute('notify:info', track.get('eventdescription'));
+                });
+
+                tracksCollection.on('add', function() {
+                    tracksCollection.fetchLastStatus();
+                });
+
                 buttonsPanelView.on('click:refresh', function() {
                     tracksCollection.fetchLastStatus();
                 });

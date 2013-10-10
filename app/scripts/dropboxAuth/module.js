@@ -1,3 +1,4 @@
+/* jshint -W003 */
 define(['app', 'dropbox', 'config', 'dropboxAuth/views/authPanel', 'dropboxDatastore'], function (app, Dropbox, config, AuthPanelView, DropboxDatastore) {
 
     app.addRegions({
