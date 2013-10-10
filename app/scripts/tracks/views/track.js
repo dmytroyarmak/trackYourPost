@@ -4,6 +4,14 @@ define(['marionette', 'tpl!tracks/templates/track.tpl'], function (Marionette, t
         template: trackTemplate,
         modelEvents: {
             'change': 'render'
+        },
+
+        events: {
+            'click .j-track-destroy': 'destroyTrack'
+        },
+
+        destroyTrack: function() {
+            this.model.destroy();
         }
     });
 

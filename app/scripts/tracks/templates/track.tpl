@@ -7,4 +7,5 @@
       <dt>Час останньої зміни стану: </dt><dd><%= eventdate %></dd>
       <dt>Поточний стан: </dt><dd><%= eventdescription %></dd>
     </dl>
+    <button class="btn btn-danger j-track-destroy">Видалити</button>
 </div>
