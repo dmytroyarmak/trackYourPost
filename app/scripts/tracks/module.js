@@ -2,7 +2,6 @@ define(
     ['app', 'tracks/collections/tracks', 'tracks/views/layout', 'tracks/views/buttonsPanel', 'tracks/views/addTrack', 'tracks/views/tracks'],
     function (app, TracksCollection, LayoutView, ButtonsPanelView, AddTrackView, TracksListView) {
         app.on('start', function() {
-            console.log('start tracks module');
             app.vent.on('authorization:success', function() {
                 var layoutView = new LayoutView(),
                     tracksCollection = new TracksCollection(),

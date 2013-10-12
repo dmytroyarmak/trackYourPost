@@ -6,7 +6,6 @@ define(['app', 'dropbox', 'config', 'dropboxAuth/views/authPanel', 'dropboxDatas
     });
 
     app.on('start', function() {
-        console.log('start dropboxAuth module');
         var dropboxClient = new Dropbox.Client({key: config.dropboxAppKey});
 
         // Try to finish OAuth authorization.

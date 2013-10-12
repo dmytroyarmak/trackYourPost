@@ -13,7 +13,9 @@ require.config({
         bootstrapTooltip: '../bower_components/sass-bootstrap/js/tooltip',
         bootstrapTransition: '../bower_components/sass-bootstrap/js/transition',
         backbone: '../bower_components/backbone/backbone',
-        marionette: '../bower_components/marionette/lib/backbone.marionette',
+        'backbone.wreqr': '../bower_components/backbone.wreqr/lib/amd/backbone.wreqr',
+        'backbone.babysitter': '../bower_components/backbone.babysitter/lib/amd/backbone.babysitter',
+        marionette: '../bower_components/marionette/lib/core/amd/backbone.marionette',
         requirejs: '../bower_components/requirejs/require',
         'sass-bootstrap': '../bower_components/sass-bootstrap/dist/js/bootstrap',
         underscore: '../bower_components/underscore/underscore',
@@ -104,12 +106,8 @@ require.config({
     }
 });
 
-require(['app', 'jquery'], function (app, $) {
-    'use strict';
-
+require(['app', 'jquery', 'dropboxAuth/module', 'tracks/module', 'notifications/module'], function (app, $) {
     $(function() {
-        require(['dropboxAuth/module', 'tracks/module', 'notifications/module'], function() {
-            app.start();
-        });
+        app.start();
     });
 });
