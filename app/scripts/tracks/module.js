@@ -11,6 +11,7 @@ define(
 
                 tracksCollection.fetch({
                     success: function() {
+                        tracksCollection.fetchLastStatus();
                         tracksCollection.on('add', function() {
                             tracksCollection.fetchLastStatus();
                         });
