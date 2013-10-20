@@ -12,6 +12,7 @@ define(['underscore', 'backbone', 'tracks/models/track', 'config', 'dropboxDatas
                     ids: this.pluck('barcode').join(',')
                 },
                 success: function(data) {
+                    this.updateTime = new Date();
                     this.set(data, {parse: true});
                 },
                 context: this

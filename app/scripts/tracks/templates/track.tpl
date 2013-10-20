@@ -1,9 +1,4 @@
-<div class="well">
-    <h3><%= description %></h3>
-    <hr>
-    <dl class="dl-horizontal">
-      <dt>Номер відправлення: </dt><dd><%= barcode %></dd>
-      <dt>Поточний стан: </dt><dd><%= eventdescription %></dd>
-    </dl>
-    <button class="btn btn-danger j-track-destroy">Видалити</button>
-</div>
+<th><%= description %></th>
+<td><%= barcode %></td>
+<td><%= eventdescription %></td>
+<td><a class="j-track-destroy" href="#" aria-hidden="true"><i class="glyphicon glyphicon-trash"></i></a></td>

@@ -1,6 +1,7 @@
 define(['marionette', 'underscore', 'tpl!tracks/templates/track.tpl'], function (Marionette, _, trackTemplate) {
 
     var TrackView = Marionette.ItemView.extend({
+        tagName: 'tr',
         template: trackTemplate,
         modelEvents: {
             'change': 'render'
@@ -18,6 +19,7 @@ define(['marionette', 'underscore', 'tpl!tracks/templates/track.tpl'], function 
 
         destroyTrack: function() {
             this.model.destroy();
+            return false;
         }
     });
 
