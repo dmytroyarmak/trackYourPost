@@ -1,5 +1,5 @@
 define(
-    ['marionette', 'underscore', 'tracks/views/track', 'tracks/views/emptyTrack', 'tpl!tracks/templates/tracks.tpl'],
+    ['marionette', 'underscore', 'tracks/views/track', 'tracks/views/emptyTrack', 'tpl!tracks/templates/tracks.tpl', 'jquery.timeago.ua'],
     function (Marionette, _, TrackView, EmptyTrackView, tracksTemplate) {
 
         var TracksView = Marionette.CompositeView.extend({
@@ -29,9 +29,7 @@ define(
                 var timeNow = new Date(),
                     time = $('<time>').attr('datetime', timeNow.toISOString()).text(timeNow.toLocaleString());
                 this.ui.tracksLastUpdate.text('(Оновлено ').append(time).append($(document.createTextNode(')')));
-                require(['timeagoUk'], function() {
-                    time.timeago();
-                });
+                time.timeago();
             }
         });
 
