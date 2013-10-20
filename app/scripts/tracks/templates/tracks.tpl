@@ -2,7 +2,7 @@
     <div class="panel-heading">
         <h2 class="panel-title">Список поштових відправлень</h2>
     </div>
-    <table class="table table-striped">
+    <table class="table table-striped table-condensed">
         <thead>
             <tr>
                 <th>Назва</th>
