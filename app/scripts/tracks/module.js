@@ -9,14 +9,16 @@ define(
                     addTrackView = new AddTrackView(),
                     tracksListView = new TracksListView({collection: tracksCollection});
 
-                tracksCollection.fetch();
+                tracksCollection.fetch({
+                    success: function() {
+                        tracksCollection.on('add', function() {
+                            tracksCollection.fetchLastStatus();
+                        });
+                    }
+                });
 
                 tracksCollection.on('change:eventdescription', function(track) {
                     app.execute('notify:info', track.get('eventdescription'));
-                });
-
-                tracksCollection.on('add', function() {
-                    tracksCollection.fetchLastStatus();
                 });
 
                 buttonsPanelView.on('click:refresh', function() {

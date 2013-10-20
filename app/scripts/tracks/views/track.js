@@ -1,4 +1,4 @@
-define(['marionette', 'tpl!tracks/templates/track.tpl'], function (Marionette, trackTemplate) {
+define(['marionette', 'underscore', 'tpl!tracks/templates/track.tpl'], function (Marionette, _, trackTemplate) {
 
     var TrackView = Marionette.ItemView.extend({
         template: trackTemplate,
@@ -8,6 +8,12 @@ define(['marionette', 'tpl!tracks/templates/track.tpl'], function (Marionette, t
 
         events: {
             'click .j-track-destroy': 'destroyTrack'
+        },
+
+        serializeData: function() {
+            return _.defaults(Marionette.ItemView.prototype.serializeData.apply(this, arguments), {
+                description: ''
+            });
         },
 
         destroyTrack: function() {
