@@ -1,6 +1,8 @@
 require.config({
     paths: {
         jquery: '../bower_components/jquery/jquery',
+        timeago: '../bower_components/jquery-timeago/jquery.timeago',
+        timeagoUk: '../bower_components/jquery-timeago/locales/jquery.timeago.uk',
         bootstrapAffix: '../bower_components/sass-bootstrap/js/affix',
         bootstrapAlert: '../bower_components/sass-bootstrap/js/alert',
         bootstrapButton: '../bower_components/sass-bootstrap/js/button',
@@ -24,6 +26,11 @@ require.config({
         dropboxDatastore: '../bower_components/backbone.dropboxDatastore/backbone.dropboxDatastore'
     },
     shim: {
+        timeagoUk: {
+            deps: [
+                'timeago'
+            ]
+        },
         bootstrapAffix: {
             deps: [
                 'jquery'
@@ -106,7 +113,7 @@ require.config({
     }
 });
 
-require(['app', 'jquery', 'dropboxAuth/module', 'tracks/module', 'notifications/module'], function (app, $) {
+require(['app', 'jquery', 'timeagoUk', 'dropboxAuth/module', 'tracks/module', 'notifications/module'], function (app, $) {
     $(function() {
         app.start();
     });
