@@ -11,6 +11,12 @@ define(['marionette', 'underscore', 'tpl!tracks/templates/track.tpl'], function 
             'click .j-track-destroy': 'destroyTrack'
         },
 
+        onRender: function() {
+            if (this.model.get('code')) {
+                this.$el.addClass('warning');
+            }
+        },
+
         serializeData: function() {
             return _.defaults(Marionette.ItemView.prototype.serializeData.apply(this, arguments), {
                 description: ''
