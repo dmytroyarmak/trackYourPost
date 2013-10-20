@@ -1,6 +1,9 @@
 <div class="panel panel-info">
     <div class="panel-heading">
-        <h2 class="panel-title">Список поштових відправлень</h2>
+        <h2 class="panel-title">
+            Список поштових відправлень
+            <a class="pull-right j-refresh-track-btn" href="#"><i class="glyphicon glyphicon-refresh"></i></a>
+        </h2>
     </div>
     <table class="table table-striped table-condensed">
         <thead>
