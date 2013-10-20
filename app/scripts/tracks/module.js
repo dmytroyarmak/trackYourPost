@@ -18,7 +18,10 @@ define(
                 });
 
                 tracksCollection.on('change:eventdescription', function(track) {
-                    app.execute('notify:info', track.get('eventdescription'));
+                    app.execute('notify:info', {
+                        title: track.get('description'),
+                        message: track.get('eventdescription')
+                    });
                 });
 
                 buttonsPanelView.on('click:refresh', function() {
