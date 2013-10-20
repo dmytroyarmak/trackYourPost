@@ -2,6 +2,7 @@
     <div class="panel-heading">
         <h2 class="panel-title">
             Список поштових відправлень
+            <span class="tracks-last-update j-tracks-last-update"></span>
             <a class="pull-right j-refresh-track-btn" href="#"><i class="glyphicon glyphicon-refresh"></i></a>
         </h2>
     </div>

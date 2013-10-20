@@ -113,7 +113,7 @@ require.config({
     }
 });
 
-require(['app', 'jquery', 'timeagoUk', 'bootstrapAlert', 'dropboxAuth/module', 'tracks/module', 'notifications/module'], function (app, $) {
+require(['app', 'jquery', 'timeago', 'bootstrapAlert', 'dropboxAuth/module', 'tracks/module', 'notifications/module'], function (app, $) {
     $(function() {
         app.start();
     });
