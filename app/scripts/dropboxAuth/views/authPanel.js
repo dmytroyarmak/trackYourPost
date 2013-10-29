@@ -1,4 +1,4 @@
-define(['marionette', 'tpl!dropboxAuth/templates/authPanel.tpl'], function (Marionette, authPanelTemplate) {
+define(['marionette', 'underscore', 'tpl!dropboxAuth/templates/authPanel.tpl'], function (Marionette, _, authPanelTemplate) {
     var AuthPanelView = Marionette.ItemView.extend({
         template: authPanelTemplate,
 
@@ -24,7 +24,12 @@ define(['marionette', 'tpl!dropboxAuth/templates/authPanel.tpl'], function (Mari
         },
 
         singOut: function() {
-            this.dropboxClient.signOut({}, this.render);
+            this.dropboxClient.signOut({}, _.bind(this._onSignOut, this));
+        },
+
+        _onSignOut: function() {
+            this.render();
+            this.trigger('signOut');
         }
     });
 

@@ -36,6 +36,11 @@ define(['app', 'dropbox', 'config', 'dropboxAuth/views/authPanel', 'dropboxDatas
                         dropboxClient: dropboxClient,
                         accountInfo: accountInfo || {}
                     });
+
+                authPanelView.on('signOut', function() {
+                    app.vent.trigger('authorization:signOut');
+                });
+
                 app.dropboxAuthRegion.show(authPanelView);
             }
         }

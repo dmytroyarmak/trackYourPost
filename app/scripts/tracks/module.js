@@ -46,6 +46,10 @@ define(
 
                 app.mainRegion.show(layoutView);
             });
+
+            app.vent.on('authorization:signOut', function() {
+                app.mainRegion.close();
+            });
         });
     }
 );
