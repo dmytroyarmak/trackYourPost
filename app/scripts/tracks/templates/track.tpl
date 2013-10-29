@@ -1,5 +1,6 @@
 <th><%= description %></th>
 <td><%= barcode %></td>
+<td><%= eventdescription %></td>
 <td><%= state %> <% if (isUpdated) { %><span class="label label-success">Оновлено</span><% } %></td>
 <td><%= eventdate %></td>
 <td><%= lastoffice %></td>
