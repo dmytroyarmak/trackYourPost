@@ -23,7 +23,8 @@ require.config({
         underscore: '../bower_components/underscore/underscore',
         tpl: '../bower_components/requirejs-tpl/tpl',
         dropbox: 'https://www.dropbox.com/static/api/dropbox-datastores-1.0-latest',
-        dropboxDatastore: '../bower_components/backbone.dropboxDatastore/backbone.dropboxDatastore'
+        dropboxDatastore: '../bower_components/backbone.dropboxDatastore/backbone.dropboxDatastore',
+        nprogress: '../bower_components/nprogress/nprogress'
     },
     shim: {
         bootstrapAffix: {
@@ -104,6 +105,12 @@ require.config({
         },
         dropbox: {
             exports: 'Dropbox'
+        },
+        nprogress: {
+            deps: [
+                'jquery'
+            ],
+            exports: 'NProgress'
         }
     }
 });

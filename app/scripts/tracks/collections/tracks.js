@@ -7,6 +7,7 @@ define(['underscore', 'backbone', 'tracks/models/track', 'config', 'dropboxDatas
         fetchLastStatus: function(options) {
             if (!this._statusFetching) {
                 this._statusFetching = true;
+                this.trigger('status:fetching', this);
                 Backbone.ajax({
                     dataType: 'json',
                     url: this.url,

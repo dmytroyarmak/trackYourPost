@@ -1,6 +1,6 @@
 define(
-    ['app', 'tracks/collections/tracks', 'tracks/views/layout', 'tracks/views/addTrack', 'tracks/views/tracks'],
-    function (app, TracksCollection, LayoutView, AddTrackView, TracksListView) {
+    ['app', 'nprogress', 'tracks/collections/tracks', 'tracks/views/layout', 'tracks/views/addTrack', 'tracks/views/tracks'],
+    function (app, NProgress, TracksCollection, LayoutView, AddTrackView, TracksListView) {
         app.on('start', function() {
             app.vent.on('authorization:success', function() {
                 var layoutView = new LayoutView(),
@@ -22,6 +22,14 @@ define(
                         title: track.get('description'),
                         message: track.get('eventdescription')
                     });
+                });
+
+                tracksCollection.on('status:fetching', function() {
+                    NProgress.start();
+                });
+
+                tracksCollection.on('status:fetched', function() {
+                    NProgress.done();
                 });
 
                 addTrackView.on('submit:form', function(data) {
