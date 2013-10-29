@@ -29,6 +29,21 @@ define(['backbone', 'underscore'], function (Backbone, _) {
 
         isUpdated: function() {
             return !_.isUndefined(this.changed.eventdescription);
+        },
+
+        getState: function() {
+            switch(+this.get('code')){
+            case 0:
+                return 'Не зареєстроване в системі';
+            case 20701:
+                return 'В процесі оброблення';
+            case 41002:
+                return 'Вручене адресату особисто';
+            case 60701:
+                return 'Надійшло до місця міжнародного поштового обміну';
+            default:
+                return this.get('code');
+            }
         }
     });
 

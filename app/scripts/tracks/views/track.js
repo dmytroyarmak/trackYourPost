@@ -20,7 +20,8 @@ define(['marionette', 'underscore', 'tpl!tracks/templates/track.tpl'], function 
         serializeData: function() {
             return _.defaults(Marionette.ItemView.prototype.serializeData.apply(this, arguments), {
                 description: '',
-                isUpdated: this.model.isUpdated()
+                isUpdated: this.model.isUpdated(),
+                state: this.model.getState()
             });
         },
 
