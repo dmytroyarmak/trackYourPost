@@ -6,16 +6,15 @@
             <a class="pull-right j-refresh-track-btn" href="#"><i class="glyphicon glyphicon-refresh"></i></a>
         </h2>
     </div>
-    <table class="table table-striped table-condensed">
+    <table class="table table-condensed">
         <thead>
             <tr>
                 <th>Назва</th>
                 <th>Номер</th>
-                <th>Поточний стан</th>
                 <th>Стан</th>
-                <th>Дата</th>
                 <th>Відділення</th>
                 <th>Індекс</th>
+                <th>Дата</th>
                 <th>Дії</th>
             </tr>
         </thead>
