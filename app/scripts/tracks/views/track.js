@@ -26,7 +26,10 @@ define(['marionette', 'underscore', 'tpl!tracks/templates/track.tpl'], function 
         },
 
         destroyTrack: function() {
-            this.model.destroy();
+            var msg = 'Ви впевнені що хочете видалити запис з номером ' + this.model.get('barcode') + ' ?';
+            if (window.confirm(msg)) {
+                this.model.destroy();
+            }
             return false;
         }
     });
