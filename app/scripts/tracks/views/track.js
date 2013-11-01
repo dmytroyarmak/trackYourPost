@@ -52,7 +52,7 @@ define(['marionette', 'underscore', 'tpl!tracks/templates/track.tpl'], function 
         onClickSave: function() {
             this._editable = false;
             this.model.set({
-                barcode: this.ui.inputBarcode.val(),
+                barcode: this.ui.inputBarcode.val().toUpperCase(),
                 description: this.ui.inputDescription.val()
             });
             this.render();

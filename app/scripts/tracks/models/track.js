@@ -31,20 +31,25 @@ define(['backbone', 'underscore'], function (Backbone, _) {
         },
 
         getState: function() {
-            switch(+this.get('code')){
-            case 0:
-                return 'Не зареєстроване в системі';
-            case 20701:
-                return 'В процесі оброблення';
-            case 41002:
-                return 'Вручене адресату особисто';
-            case 60701:
-                return 'Надійшло до місця міжнародного поштового обміну';
-            case 80801:
-                return 'Передано для митного контролю';
-            default:
-                return this.get('code');
+            if (this.get('eventdescription').match(/^ПОМИЛКА!/)) {
+                return 'Уведено неправильний ідентифікатор';
+            } else {
+                switch(+this.get('code')){
+                case 0:
+                    return 'Не зареєстроване в системі';
+                case 20701:
+                    return 'В процесі оброблення';
+                case 41002:
+                    return 'Вручене адресату особисто';
+                case 60701:
+                    return 'Надійшло до місця міжнародного поштового обміну';
+                case 80801:
+                    return 'Передано для митного контролю';
+                default:
+                    return this.get('code');
+                }
             }
+
         }
     });
 
