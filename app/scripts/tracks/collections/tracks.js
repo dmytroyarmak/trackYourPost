@@ -14,14 +14,22 @@ define(['underscore', 'backbone', 'tracks/models/track', 'config', 'dropboxDatas
                     data: {
                         ids: this.pluck('barcode').join(',')
                     },
-                    success: function(data) {
-                        this.set(data, {parse: true});
+                    success: function(statuses) {
+                        this.updateTrackStatus(statuses);
                         this.trigger('status:fetched', this);
                         this._statusFetching = false;
                     },
                     context: this
                 });
             }
+        },
+
+        updateTrackStatus: function(statuses) {
+            _.each(statuses, function(status){
+                _.each(this.where({barcode: status.barcode}), function(trackModel) {
+                    trackModel.set(status);
+                });
+            }, this);
         }
     });
 

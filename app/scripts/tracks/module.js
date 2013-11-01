@@ -8,6 +8,8 @@ define(
                     addTrackView = new AddTrackView(),
                     tracksListView = new TracksListView({collection: tracksCollection});
 
+                window.foo = tracksCollection;
+
                 tracksCollection.fetch({
                     success: function() {
                         tracksCollection.fetchLastStatus();

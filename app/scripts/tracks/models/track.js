@@ -1,6 +1,5 @@
 define(['backbone', 'underscore'], function (Backbone, _) {
     var track = Backbone.Model.extend({
-        idAttribute: 'barcode',
         // Attributes:
         //   - My Attributes:
         //      - description
@@ -41,6 +40,8 @@ define(['backbone', 'underscore'], function (Backbone, _) {
                 return 'Вручене адресату особисто';
             case 60701:
                 return 'Надійшло до місця міжнародного поштового обміну';
+            case 80801:
+                return 'Передано для митного контролю';
             default:
                 return this.get('code');
             }
