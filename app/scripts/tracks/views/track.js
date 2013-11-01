@@ -21,7 +21,9 @@ define(['marionette', 'underscore', 'tpl!tracks/templates/track.tpl'], function 
         },
 
         onRender: function() {
-            if (this.model.get('code')) {
+            if (this.model.isHanded()) {
+                this.$el.addClass('success');
+            } else if (this.model.isRegistered()) {
                 this.$el.addClass('active');
             }
         },
@@ -52,7 +54,7 @@ define(['marionette', 'underscore', 'tpl!tracks/templates/track.tpl'], function 
         onClickSave: function() {
             this._editable = false;
             this.model.set({
-                barcode: this.ui.inputBarcode.val().toUpperCase(),
+                barcode: this.ui.inputBarcode.val().replace(/^\s+|\s+$/g, '').toUpperCase(),
                 description: this.ui.inputDescription.val()
             });
             this.render();

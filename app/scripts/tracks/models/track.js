@@ -50,6 +50,14 @@ define(['backbone', 'underscore'], function (Backbone, _) {
                 }
             }
 
+        },
+
+        isHanded: function() {
+            return this.get('code') === '41002';
+        },
+
+        isRegistered: function() {
+            return !!this.get('code');
         }
     });
 

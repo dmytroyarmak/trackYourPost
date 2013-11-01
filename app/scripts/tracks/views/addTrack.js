@@ -17,7 +17,7 @@ define(['marionette', 'tpl!tracks/templates/addTrack.tpl'], function(Marionette,
                 description = this.ui.descriptionInput.val();
             this._resetForm();
             this.trigger('submit:form', {
-                barcode: barcode,
+                barcode: barcode.replace(/^\s+|\s+$/g, '').toUpperCase(),
                 description: description
             });
         },
