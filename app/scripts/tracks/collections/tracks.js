@@ -4,6 +4,8 @@ define(['underscore', 'backbone', 'tracks/models/track', 'config', 'dropboxDatas
         model: Track,
         url: config.ukrPostApiUrl,
         dropboxDatastore: new DropboxDatastore('tracks'),
+        comparator: 'index',
+
         fetchLastStatus: function(options) {
             if (!this._statusFetching) {
                 this._statusFetching = true;

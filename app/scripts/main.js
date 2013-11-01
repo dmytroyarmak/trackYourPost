@@ -1,6 +1,10 @@
 require.config({
     paths: {
         jquery: '../bower_components/jquery/jquery',
+        jqueryUiCore: '../bower_components/jquery-ui/ui/jquery.ui.core',
+        jqueryUiWidget: '../bower_components/jquery-ui/ui/jquery.ui.widget',
+        jqueryUiMouse: '../bower_components/jquery-ui/ui/jquery.ui.mouse',
+        jqueryUiSortable: '../bower_components/jquery-ui/ui/jquery.ui.sortable',
         timeago: '../bower_components/jquery-timeago/jquery.timeago',
         timeagoua: '../bower_components/jquery-timeago/locales/jquery.timeago.uk',
         bootstrapAffix: '../bower_components/sass-bootstrap/js/affix',
@@ -84,6 +88,28 @@ require.config({
         },
         jquery: {
             exports: 'jQuery'
+        },
+        jqueryUiCore: {
+            deps: [
+                'jquery'
+            ]
+        },
+        jqueryUiWidget: {
+            deps: [
+                'jqueryUiCore'
+            ]
+        },
+        jqueryUiMouse: {
+            deps: [
+                'jqueryUiWidget'
+            ]
+        },
+        jqueryUiSortable: {
+            deps: [
+                'jqueryUiCore',
+                'jqueryUiWidget',
+                'jqueryUiMouse'
+            ]
         },
         underscore: {
             exports: '_'

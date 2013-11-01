@@ -23,6 +23,7 @@
 <td><%= lastofficeindex %></td>
 <td><%= eventdate %></td>
 <td>
+    <a class="track-handle j-track-handle" href="#" aria-hidden="true"><i class="glyphicon glyphicon-resize-vertical"></i></a>
     <% if (!editable) { %>
         <a class="j-track-edit" href="#" aria-hidden="true"><i class="glyphicon glyphicon-edit"></i></a>
     <% } %>

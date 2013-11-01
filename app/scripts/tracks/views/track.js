@@ -65,6 +65,10 @@ define(['marionette', 'underscore', 'tpl!tracks/templates/track.tpl'], function 
             this._editable = false;
             this.render();
             return false;
+        },
+
+        updateIndex: function() {
+            this.model.set('index', this.$el.index());
         }
     });
 

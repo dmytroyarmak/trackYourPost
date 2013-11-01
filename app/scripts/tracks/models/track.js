@@ -17,7 +17,8 @@ define(['backbone', 'underscore'], function (Backbone, _) {
             eventdate: '...',
             eventdescription: '...',
             lastoffice: '...',
-            lastofficeindex: '...'
+            lastofficeindex: '...',
+            index: 10000
         },
 
         initialize: function() {
