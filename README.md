@@ -3,7 +3,7 @@ trackYourPost
 
 Client app for store and update tracking status for post using UkrPoshta Service and store client data using Dropbox Datastore API.
 
-Build using:
+##Build with:
 - Backbone.js
 - Backbone.dropboxDatastore
 - Marionette
