@@ -17,10 +17,10 @@ define(
                     }
                 });
 
-                tracksCollection.on('change:eventdescription', function(track) {
+                tracksCollection.on('change:eventDescription', function(track) {
                     app.execute('notify:info', {
                         title: track.get('description'),
-                        message: track.get('eventdescription')
+                        message: track.get('eventDescription')
                     });
                 });
 

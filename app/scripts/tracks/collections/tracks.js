@@ -1,4 +1,4 @@
-define(['underscore', 'backbone', 'tracks/models/track', 'config', 'dropboxDatastore'], function (_, Backbone, Track, config, DropboxDatastore) {
+define(['underscore', 'backbone', 'jquery', 'tracks/models/track', 'config', 'dropboxDatastore'], function (_, Backbone, $, Track, config, DropboxDatastore) {
 
     var tracks = Backbone.Collection.extend({
         model: Track,
@@ -10,28 +10,19 @@ define(['underscore', 'backbone', 'tracks/models/track', 'config', 'dropboxDatas
             if (!this._statusFetching) {
                 this._statusFetching = true;
                 this.trigger('status:fetching', this);
-                Backbone.ajax({
-                    dataType: 'json',
-                    url: this.url,
-                    data: {
-                        ids: this.pluck('barcode').join(',')
-                    },
-                    success: function(statuses) {
-                        this.updateTrackStatus(statuses);
-                        this.trigger('status:fetched', this);
-                        this._statusFetching = false;
-                    },
-                    context: this
-                });
-            }
-        },
 
-        updateTrackStatus: function(statuses) {
-            _.each(statuses, function(status){
-                _.each(this.where({barcode: status.barcode}), function(trackModel) {
-                    trackModel.set(status);
-                });
-            }, this);
+                $.when.apply(null, this.map(function(track) {
+                    return Backbone.ajax({
+                        dataType: 'json',
+                        url: this.url + '/' + track.get('barcode'),
+                    }).then(function(data) {
+                        track.set(data);
+                    });
+                }, this)).always(_.bind(function() {
+                    this.trigger('status:fetched', this);
+                    this._statusFetching = false;
+                }, this));
+            }
         }
     });
 

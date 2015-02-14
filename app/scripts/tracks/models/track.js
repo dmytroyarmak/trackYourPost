@@ -6,18 +6,18 @@ define(['backbone', 'underscore'], function (Backbone, _) {
         //   - Ukrainian post API response attributes:
         //      - barcode
         //      - code
-        //      - eventdate
-        //      - eventdescription
-        //      - lastoffice
-        //      - lastofficeindex
+        //      - eventDate
+        //      - eventDescription
+        //      - lastOffice
+        //      - lastOfficeIndex
 
         defaults: {
             barcode: '',
             code: '...',
-            eventdate: '...',
-            eventdescription: '...',
-            lastoffice: '...',
-            lastofficeindex: '...',
+            eventDate: '...',
+            eventDescription: '...',
+            lastOffice: '...',
+            lastOfficeIndex: '...',
             index: 10000
         },
 
@@ -28,11 +28,11 @@ define(['backbone', 'underscore'], function (Backbone, _) {
         },
 
         isUpdated: function() {
-            return !_.isUndefined(this.changed.eventdescription);
+            return !_.isUndefined(this.changed.eventDescription);
         },
 
         getState: function() {
-            if (this.get('eventdescription').match(/^ПОМИЛКА!/)) {
+            if (this.get('eventDescription').match(/^ПОМИЛКА!/)) {
                 return 'Уведено неправильний ідентифікатор';
             } else {
                 switch(+this.get('code')){

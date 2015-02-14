@@ -19,9 +19,9 @@
     <% } %>
 </td>
 <td><%= state %> <% if (isUpdated) { %><span class="label label-success">Оновлено</span><% } %></td>
-<td><%= lastoffice %></td>
-<td><%= lastofficeindex %></td>
-<td><%= eventdate %></td>
+<td><%= lastOffice %></td>
+<td><%= lastOfficeIndex %></td>
+<td><%= eventDate %></td>
 <td>
     <a class="track-handle j-track-handle" href="#" aria-hidden="true"><i class="glyphicon glyphicon-resize-vertical"></i></a>
     <% if (!editable) { %>
